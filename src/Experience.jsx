@@ -16,8 +16,8 @@ import portalVertexShader from "./shaders/portal/vertex.glsl";
 import portalFragmentShader from "./shaders/portal/fragment.glsl";
 
 export default function Experience() {
-  const { nodes } = useGLTF("/public/portal.glb");
-  const bakedTexture = useTexture("/public/baked.jpg");
+  const { nodes } = useGLTF("/portal.glb");
+  const bakedTexture = useTexture("/baked.jpg");
   bakedTexture.flipY = false;
 
   //シェーダーでポータルの渦生成
@@ -39,9 +39,9 @@ export default function Experience() {
     portalMaterial.current.uTime += delta * 4;
   });
 
-  const rock = useGLTF("./rock.glb");
-  const mashroom = useGLTF("./public/mashroom.glb");
-  const crystals2 = useGLTF("./public/crystals2.glb");
+  const rock = useGLTF("/rock.glb");
+  const mashroom = useGLTF("/mashroom.glb");
+  const crystals2 = useGLTF("/crystals2.glb");
   return (
     <>
       <directionalLight
