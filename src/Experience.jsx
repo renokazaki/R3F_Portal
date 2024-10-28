@@ -40,8 +40,8 @@ export default function Experience() {
   });
 
   const rock = useGLTF("./rock.glb");
-  const mashroom = useGLTF("./mashroom.glb");
-  const crystals2 = useGLTF("./crystals2.glb");
+  const mashroom = useGLTF("./public/mashroom.glb");
+  const crystals2 = useGLTF("./public/crystals2.glb");
   return (
     <>
       <directionalLight
