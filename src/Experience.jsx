@@ -16,8 +16,8 @@ import portalVertexShader from "./shaders/portal/vertex.glsl";
 import portalFragmentShader from "./shaders/portal/fragment.glsl";
 
 export default function Experience() {
-  const { nodes } = useGLTF("./public/portal.glb");
-  const bakedTexture = useTexture("./public/baked.jpg");
+  const { nodes } = useGLTF("/public/portal.glb");
+  const bakedTexture = useTexture("/public/baked.jpg");
   bakedTexture.flipY = false;
 
   //シェーダーでポータルの渦生成
