@@ -6,6 +6,7 @@ import {
   OrbitControls,
   shaderMaterial,
   Clone,
+  Text,
 } from "@react-three/drei";
 import * as THREE from "three";
 import { extend, useFrame } from "@react-three/fiber";
@@ -44,6 +45,7 @@ export default function Experience() {
   const crystals2 = useGLTF("/crystals2.glb");
   return (
     <>
+      <Text position={[0, 3, -3]}>ポータルがかわいいでしょ</Text>
       <directionalLight
         castShadow
         position={[1, 2, 3]}
@@ -135,11 +137,14 @@ export default function Experience() {
         position={[-3.3, -1, 1.8]}
         rotation-y={1.5}
       />
+      {/* クリスタル */}
+
       <primitive
         object={crystals2.scene}
         scale={0.5}
         position={[2.5, -1, 1.8]}
       />
+      <Clone object={crystals2.scene} scale={0.8} position={[-4.0, -1, 1.3]} />
       <Clone object={crystals2.scene} scale={0.7} position={[3.5, -1, 1.8]} />
       <Clone object={crystals2.scene} scale={1} position={[2.5, -1, -2]} />
       <Clone object={crystals2.scene} scale={1.3} position={[-2.5, -1, -2.7]} />
